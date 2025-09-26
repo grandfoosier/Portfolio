@@ -1,0 +1,148 @@
+/* ========== RESET & BASELINE ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+:root {
+  --bg: #f9fafb;
+  --text: #111827;
+  --text-muted: #374151;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --link: #0ea5e9;
+  --link-hover: #0284c7;
+  --nav-bg: #e5ebf8;
+  --footer-bg: #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --text: #f9fafb;
+  --text-muted: #d1d5db;
+  --card-bg: #1f2937;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --link: #38bdf8;
+  --link-hover: #0ea5e9;
+  --nav-bg: #131e36;
+  --footer-bg: #1f2937;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Remove list styles globally */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smooth transitions for common elements */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* ========================
+   THEME-AWARE TYPOGRAPHY
+   ======================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+/* Page titles */
+h1 {
+  font-size: 2.25rem; /* ~36px */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--link);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* Section headings */
+h2 {
+  font-size: 1.5rem; /* ~24px */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-muted); /* ✅ softer text for readability */
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* ========== LAYOUT HELPERS ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========== BUTTONS ========== */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #0ea5e9; /* blue */
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #0284c7; /* darker blue */
+}
+
+button.secondary {
+  background-color: #e5e7eb; /* gray-200 */
+  color: #111827;
+}
+
+button.secondary:hover {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+.fadeIn {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}

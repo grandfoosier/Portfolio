@@ -1,0 +1,44 @@
+.button {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.iconActive {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.sunInactive {
+  transform: translateX(-50px) scale(0.8);
+}
+
+.moonInactive {
+  transform: translateX(50px) scale(0.8);
+}
+
+/* ✅ Hover effect only on active icon */
+.button:hover .iconActive {
+  transform: translateX(0) scale(1.2);
+}

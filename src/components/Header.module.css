@@ -1,0 +1,199 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #0ea5e9;
+  transition: width 0.2s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--nav-bg); /* light gray fallback */
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.header {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.link:hover {
+  color: var(--link);
+}
+
+.active {
+  font-weight: 700;
+  color: var(--link);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* logo left, everything else right */
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: jetbrains-mono, monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.navDesktop {
+  display: flex;
+}
+
+.navDesktop ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navDesktop li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navDesktop li a:hover {
+  color: var(--link);
+}
+
+.active a {
+  font-weight: 700;
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: none; /* hidden on desktop */
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hide desktop nav on small screens */
+@media (max-width: 768px) {
+  .navDesktop {
+    display: none;
+  }
+}
+
+.menuButton:hover {
+  color: var(--link);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.menuButton.active {
+  color: var(--link); /* highlighted */
+  background: rgba(14, 165, 233, 0.15); /* soft blue tint */
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25); /* softer */
+  backdrop-filter: blur(3px);
+  z-index: 90;
+
+  /* ✅ Allow it to catch clicks */
+  pointer-events: auto;
+}
+
+/* Mobile drawer */
+.navMobile {
+  position: fixed;
+  top: 100%;
+  right: 0;
+  width: 70%;              /* feels lighter than 100% */
+  max-width: 128px;
+  background: var(--nav-bg);
+  color: var(--text);
+  border-left: 1px solid var(--border);
+  z-index: 100;
+
+  /* Drawer polish */
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: -6px 0 16px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 1.5rem; /* leave space for header at top */
+}
+
+.navMobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navMobile li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.navMobile li a:hover {
+  color: var(--link);
+}

@@ -1,0 +1,47 @@
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.5rem; /* <-- align with dot center */
+  width: 3px;
+  height: 100%;
+  background: var(--text-muted);
+}
+
+.item {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem 1rem 4rem;
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  position: relative;
+
+  /* only animate box-shadow in CSS, not transform */
+  transition: box-shadow 0.2s ease;
+  will-change: transform; /* hint to the browser to optimize transforms */
+}
+
+.item:hover {
+  box-shadow: 0 6px 12px var(--card-shadow);
+}
+
+/* Timeline dot */
+.dot {
+  position: absolute;
+  left: 1.5rem; /* <-- same as line */
+  top: 1.5rem;
+  transform: translateX(-50%); /* center the dot on the line */
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--link);
+}
+
+.workDot {
+  border-color: var(--text-muted);
+}
