@@ -71,7 +71,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         Designed a scalable, modular architecture that could support future expansion 
         and integrations.
       `,impact:`
-        Forecasted to generate over $100M in additional company revenue by enabling
+        Forecasted to generate tens of millions in additional company revenue by enabling
         a new deployment and licensing model. Positioned as a cornerstone for Promess's
         next decade of growth.
       `},{title:"UltraPro (Legacy Modernization)",description:`
