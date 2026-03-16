@@ -22,7 +22,7 @@ const timelineItems = [
     title: "MS in Computer Science, Eastern Michigan University",
     type: "education",
     description:
-      "Coursework in algorithms, parallel processing, networking, and AI/ML. Thesis: trained a large language model for punctuation prediction (PyTorch, GCP, AWS).",
+      "Coursework in algorithms, parallel processing, networking, and AI/ML. Thesis: trained a large language model for punctuation prediction (PyTorch, GCP).",
   },
   {
     date: "2014 - 2016",

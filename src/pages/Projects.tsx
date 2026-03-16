@@ -9,12 +9,12 @@ export default function Projects() {
       title: "UltraPro2",
       description: `
         A complete modernization of Promess's flagship manufacturing control system.
-        I led front-end development using React and TypeScript and contributed to Rust-based
-        backend services. Designed a scalable, modular architecture that could support
-        future expansion and integrations.
+        I helped design and implement Rust-based backend services and embedded firmware. 
+        Designed a scalable, modular architecture that could support future expansion 
+        and integrations.
       `,
       impact: `
-        Forecasted to generate over $100M in additional company revenue by enabling
+        Forecasted to generate tens of millions in additional company revenue by enabling
         a new deployment and licensing model. Positioned as a cornerstone for Promess's
         next decade of growth.
       `,
@@ -74,7 +74,7 @@ export default function Projects() {
       title: "BDD/TDD Automation Framework",
       description: `
         Developed a comprehensive test automation framework using Behavior-Driven Development
-        (BDD) and Test-Driven Development (TDD) practices. Integrated testing tools with
+        (BDD) and Test-Driven Development (TDD) practices. Testing tools to be integrated with
         existing CI/CD pipelines to improve software quality and developer productivity.
       `,
       impact: `
@@ -88,12 +88,26 @@ export default function Projects() {
       description: `
         Developed a transformer-based large language model trained on text data
         to predict punctuation placement. Used PyTorch for training and deployed
-        pipelines on Google Cloud and AWS for scalability.
+        on Google Cloud.
       `,
       impact: `
         Demonstrated expertise in natural language processing and cloud infrastructure,
         delivering a model with measurable improvements in punctuation restoration
         accuracy over baseline approaches.
+      `,
+    },
+    {
+      title: "Eventful",
+      description: `
+        An asynchronous event processing service written in Rust using Tokio and Axum.
+        The system demonstrates production-style service design including idempotent
+        event ingestion, bounded worker concurrency, retry state machines, and
+        explicit backpressure handling.
+      `,
+      impact: `
+        Built as a systems engineering portfolio project to demonstrate production
+        backend patterns such as observability with Prometheus metrics, structured
+        logging, graceful shutdown handling, and concurrency-safe event processing.
       `,
     },
     {

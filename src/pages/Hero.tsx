@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 import PageWrapper from "../components/PageWrapper";
+import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -14,22 +15,20 @@ export default function Hero() {
           >
             <h1 className={styles.title}>Stephen A. Rice</h1>
             <h2 className={styles.subtitle}>
-              Software Engineer · Security Enthusiast · Problem Solver
+              Software engineer specializing in backend and systems development.
             </h2>
             <p className={styles.tagline}>
-              Software engineer with a strong foundation in math, engineering, and systems -
-              applying expertise in data, algorithms, and secure development to build reliable,
-              impactful solutions. Passionate about leveraging machine learning and AI to turn
-              complex data into actionable insights.
+              I build reliable services using Rust,Go, and C#, with experience in event-driven architectures, real-time systems, and hardware-integrated APIs.
+              My work focuses on concurrency safety, observability, and production-grade system design.
             </p>
 
             <div className={styles.cta}>
-              <a href="/projects" className={styles.button}>
-                View My Work
-              </a>
-              <a href="/contact" className={styles.buttonSecondary}>
-                Get in Touch
-              </a>
+              <NavLink to="/projects" className={styles.button}>
+                {"View My Work"}
+              </NavLink>
+              <NavLink to="/contact" className={styles.buttonSecondary}>
+                {"Get in Touch"}
+              </NavLink>
             </div>
           </motion.div>
         </section>

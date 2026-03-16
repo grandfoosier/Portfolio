@@ -6,44 +6,38 @@ export default function About() {
       <main className="container fadeIn">
         <section style={{ padding: "4rem 0" }}>
           <h1>About Me</h1>
+
           <p>
-            I'm Stephen A. Rice, a software engineer with a passion for building
-            impactful systems, secure applications, and polished user experiences.
-            My professional work spans React, TypeScript, Rust, Go, C#, C++, Python, 
-            and modern cloud infrastructure.
+          I'm Stephen Rice, a software engineer focused on backend and systems development.
+          I build reliable services and infrastructure using Rust, Go, and C#, with
+          experience designing APIs, event-driven systems, and real-time data pipelines.
           </p>
+
           <p>
-            I have a deep focus on <strong>software security</strong> — ensuring
-            that the systems I build are not only functional and performant, but
-            also resilient against vulnerabilities and misuse. I believe secure
-            design is essential in today's connected, data-driven world, and I
-            apply security-conscious practices across the development lifecycle.
+          In my professional work I've built backend services that integrate with
+          industrial hardware systems, using technologies like gRPC, MQTT, and containerized
+          Linux deployments. These systems needed predictable behavior in production,
+          which shaped how I approach engineering: careful system design, strong testing,
+          and an emphasis on observability and reliability.
           </p>
+
           <p>
-            I also have a strong background in <strong>machine learning and
-            artificial intelligence</strong>, developed during my master's program.
-            My studies explored language models, neural networks, and
-            real-world applications of ML/AI in solving complex problems. I see ML
-            and AI not only as technical tools, but as transformative approaches
-            for turning data into insight, automation, and smarter decision-making.
+          My background is a bit unusual. I started in engineering and quantitative fields
+          before moving fully into software. A degree in nuclear engineering trained me to
+          think about safety, risk, and complex system behavior, and my graduate work in
+          computer science focused on systems and machine learning.
           </p>
+
           <p>
-            My journey into software engineering is shaped by diverse academic
-            backgrounds in <strong>nuclear engineering</strong> and
-            <strong>actuarial mathematics</strong>. Nuclear engineering trained me
-            to think critically about safety, risk, and complex system behavior,
-            while actuarial mathematics honed my skills in statistical modeling,
-            probability, and quantitative analysis. Together, these disciplines
-            gave me an analytical foundation that continues to shape how I approach
-            engineering challenges: systematically, with an eye for detail, and
-            with a constant awareness of potential edge cases.
+          That background continues to influence how I approach software problems today.
+          I tend to think about edge cases, failure modes, and system behavior under load.
+          I enjoy working on problems involving concurrency, distributed services, and
+          software that interacts with the physical world.
           </p>
+
           <p>
-            When I'm not coding, I enjoy exploring new technologies and finding 
-            ways to bring cross-disciplinary insights into software development.
-            Whether optimizing algorithms, designing APIs, applying ML techniques,
-            or modernizing legacy systems, I strive to build solutions that are 
-            secure, polished, and impactful.
+          Outside of work I like exploring new systems technologies and building small
+          infrastructure projects to understand how production services behave in practice.
           </p>
         </section>
       </main>
